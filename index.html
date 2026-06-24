@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>담임목사 후보자 자료</title>
+<title>하늘빛감리교회 후임 후보 자료</title>
 <style>
   :root {
     --navy: #1a3a6e;
@@ -40,14 +40,32 @@
   .top-bar {
     background: var(--navy);
     color: #ffffff;
-    padding: 18px 20px;
-    text-align: center;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .top-bar .church-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #ffffff;
+  }
+
+  .top-bar .church-logo {
+    height: 28px;
+    width: auto;
+    display: block;
   }
 
   .top-bar .church-name {
-    font-size: clamp(18px, 4vw, 22px);
+    font-size: clamp(15px, 3.4vw, 19px);
     font-weight: 700;
     letter-spacing: -0.01em;
+    color: #ffffff;
   }
 
   header.page-header {
@@ -78,6 +96,14 @@
     gap: 20px;
   }
 
+  .sort-label {
+    font-size: clamp(15px, 3.4vw, 19px);
+    color: var(--navy-deep);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0 0 -4px 4px;
+  }
+
   /* ====== 게이트(잠금) 화면 ====== */
   #gate-screen {
     min-height: calc(100vh - 70px);
@@ -91,8 +117,8 @@
     background: var(--card);
     border: 1px solid var(--line);
     border-radius: 14px;
-    padding: 40px 32px;
-    max-width: 380px;
+    padding: 40px 28px;
+    max-width: 520px;
     width: 100%;
     text-align: center;
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
@@ -118,6 +144,15 @@
     color: #6b6f76;
   }
 
+  .gate-label {
+    margin: 0 0 12px;
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--navy-deep);
+    text-align: center;
+    line-height: 1.4;
+  }
+
   .gate-input {
     width: 100%;
     font-size: 28px;
@@ -128,6 +163,11 @@
     border-radius: 10px;
     margin-bottom: 16px;
     -webkit-appearance: none;
+  }
+
+  .gate-input-name {
+    font-size: 24px;
+    letter-spacing: 0.1em;
   }
 
   .gate-input:focus {
@@ -160,7 +200,9 @@
 
   .gate-error {
     margin-top: 14px;
-    font-size: 14px;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.4;
     color: var(--error);
     min-height: 20px;
   }
@@ -263,6 +305,11 @@
       gap: 16px;
       padding: 20px;
     }
+
+    .gate-label,
+    .gate-error {
+      font-size: 24px;
+    }
   }
 
   footer {
@@ -276,7 +323,10 @@
 <body>
 
 <div class="top-bar">
-  <span class="church-name">하늘빛감리교회</span>
+  <a class="church-link" href="http://www.hlch.co.kr/main/main.html" target="_blank" rel="noopener">
+    <img class="church-logo" src="data:image/png;base64,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" alt="하늘빛감리교회 로고">
+  </a>
+  <span class="church-name">하늘빛감리교회 담임목사 후임 후보자료 열람 페이지</span>
 </div>
 
 <!-- ================= 게이트 화면 ================= -->
@@ -286,13 +336,20 @@
       <rect x="4" y="10" width="16" height="10" rx="2"/>
       <path d="M8 10V7a4 4 0 0 1 8 0v3"/>
     </svg>
-    <p>전화번호 뒷자리 4자리를 입력해주세요</p>
     <form id="gate-form" autocomplete="off">
+      <p class="gate-label">이름을 입력하세요.</p>
       <input
-        type="tel"
+        type="text"
+        class="gate-input gate-input-name"
+        id="gate-name"
+        placeholder="이름"
+        aria-label="이름"
+        required
+      >
+      <p class="gate-label">전화번호 뒷자리 4자리를 입력해주세요</p>
+      <input
+        type="text"
         inputmode="numeric"
-        pattern="[0-9]*"
-        maxlength="4"
         class="gate-input"
         id="gate-input"
         placeholder="0000"
@@ -315,6 +372,8 @@
 
   <main>
 
+    <div class="sort-label">가나다 순</div>
+
     <!-- 송영광 -->
     <section class="person-card">
       <div class="person-photo-block">
@@ -328,11 +387,17 @@
           </span>
           지원자료
         </a>
-        <a class="doc-link" href="https://drive.google.com/drive/folders/1-qT1KewF_nsa3oU3QZF7TzeZ_TX8NM09?usp=drive_link" target="_blank" rel="noopener">
+        <a class="doc-link" href="https://drive.google.com/file/d/1qlKFt1p4FRmpuTl7KoX8VR0JkmZyOKHB/view?t=8.143" target="_blank" rel="noopener">
           <span class="doc-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-deep)" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="13" y2="16"/></svg>
           </span>
-          설교영상
+          설교영상-1
+        </a>
+        <a class="doc-link" href="https://drive.google.com/file/d/1el2KXbv5mIpWLSPFEG8b1HFNAafpFenp/view?t=2.864" target="_blank" rel="noopener">
+          <span class="doc-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-deep)" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="13" y2="16"/></svg>
+          </span>
+          설교영상-2
         </a>
         <a class="doc-link" href="https://drive.google.com/file/d/1BMKhykTj51PlJU5C2c44ruHMS0R8tHze/view?usp=drive_link" target="_blank" rel="noopener">
           <span class="doc-icon" aria-hidden="true">
@@ -362,11 +427,17 @@
           </span>
           지원자료
         </a>
-        <a class="doc-link" href="https://drive.google.com/drive/folders/1jjnInAC8t4uO--Kbl3Jeu3bsvIrJpSeI?usp=drive_link" target="_blank" rel="noopener">
+        <a class="doc-link" href="https://drive.google.com/file/d/1ON4x0yzQE-xdPwOyQpxV4sUHXARnwcv9/view?t=1.516" target="_blank" rel="noopener">
           <span class="doc-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-deep)" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="13" y2="16"/></svg>
           </span>
-          설교영상
+          설교영상-1
+        </a>
+        <a class="doc-link" href="https://drive.google.com/file/d/1LOg8T6grGt4hteKZ5bZwPdhkme_dkJ3_/view?t=2.037" target="_blank" rel="noopener">
+          <span class="doc-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-deep)" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="13" y2="16"/></svg>
+          </span>
+          설교영상-2
         </a>
         <a class="doc-link" href="https://drive.google.com/file/d/1k6kFTMLL_9amqHUtnevh38ewZbL9Weez/view?usp=drive_link" target="_blank" rel="noopener">
           <span class="doc-icon" aria-hidden="true">
@@ -396,11 +467,17 @@
           </span>
           지원자료
         </a>
-        <a class="doc-link" href="https://drive.google.com/drive/folders/1hDtXWSjMm5PkNbYJTxmrlrH6Twr1e2-g?usp=drive_link" target="_blank" rel="noopener">
+        <a class="doc-link" href="https://drive.google.com/file/d/1HI555st_8LJbjGBjKRHOA92sI18BtpZm/view?t=2.816" target="_blank" rel="noopener">
           <span class="doc-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-deep)" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="13" y2="16"/></svg>
           </span>
-          설교영상
+          설교영상-1
+        </a>
+        <a class="doc-link" href="https://drive.google.com/file/d/1RjngVjmh-IGPc5b47fSSETHeasYWAFnI/view?t=1.237" target="_blank" rel="noopener">
+          <span class="doc-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-deep)" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="13" y2="16"/></svg>
+          </span>
+          설교영상-2
         </a>
         <a class="doc-link" href="https://drive.google.com/file/d/1wz4xiv-W5iapH7v4f_a01NHjwQ1p--j6/view?usp=drive_link" target="_blank" rel="noopener">
           <span class="doc-icon" aria-hidden="true">
@@ -422,12 +499,324 @@
 </div>
 
 <script>
-// ===== 허용된 번호의 SHA-256 해시 목록 =====
-// list.csv 의 "번호" 컬럼 값을 SHA-256으로 변환한 값입니다.
+// ===== 허용된 "이름|번호" 조합의 SHA-256 해시 목록 =====
+// list.csv 의 "이름","번호" 컬럼을 "이름|번호" 형태로 합친 뒤 SHA-256으로 변환한 값입니다.
 // 명단이 늘어나면 이 배열에 해시값을 추가하면 됩니다.
 const ALLOWED_HASHES = [
-  "3be13cd9cb0cb67e3117822fb90c99b3ea37a2e9f8fa0a45456275df9580b3f7"
+  "3d7fc04612160262fe2ad0fb6df9ab62850eca5a7781e9964cee8e02dbf1635c",
+  "c7e1436f23b5b0b666858ddc1740dcefdc0d214da8063c918502659fef511ca0",
+  "d2577898354e68c5a55a1d94b54990824156f85190dfb078ce0f6213d81e2453",
+  "16b6fc80856912553ede05bab586cbcd778c69edbff1991fde9c5c58cec23563",
+  "03201bec5774eafd9bdc58e58a8ad8ebb73868eb337155105fe2c6e41a904804",
+  "11e882c59f4cb537942d424ecba1c7a11bed3830f510e3138bdf8aeb3625192e",
+  "19e43db43ab1852076ffcfff57bd1b47a4b6ad1480b03d636450b244a557b605",
+  "295819aeb00ab0a2b7be3eec1a7ecc69ff9998a249f91be23f86c89d3824c1a6",
+  "dc7bf36f5324db03215d2237e683114b4138103ac84f92868e43ee7e25a07719",
+  "f82c93f530493c4d3a161a8fcadb94ad514ebe0b5550e51467299b8e128ad7ff",
+  "1f86d3d8c76ba89a6232e16b7cd563ffd95487ac6c6dcd9dc88676a1f1f93bb0",
+  "0c4d23670a2e32471446911be501252b396d3285252bac4077f32611650b8f10",
+  "501ac66eafe8f5b1b9efc5b3bd8b88308003af9b1bf300a15897aed9b544b8a3",
+  "9aef7cf9a17d120b8a19689985cea51cfe3d8e23f32addafe242c804681feb62",
+  "da20a12c08a98ba931961ce107ce29a12d374f1ee49f8a7f2979b3f05f741210",
+  "9e470b78ea9d713f99644e18d3b93a9db32f717a099ba7f4d0a7141256759ce7",
+  "688352d5b6c8443dda4c3e15efef642f8989378bcce1bc10f865b2ec5bdc3743",
+  "a42e4d4a9071cee6b155b10b37626828549208d53568efbe7b1053fadefa8d03",
+  "751f5571bfe06f5772d1b9a83e27ac16f6e96b6ac2242b4cf4f0c14b83986387",
+  "05caac485a6a1ec2dc9f9005125d8ae0073ef27f4d3cac8e52f63f08b4a954dc",
+  "aee936c68844a20e286dff47319acbc37887a530e471ba2e6d49a72c16a21e9f",
+  "bf16ee7e21e18f81e3d55a44087ad46faf6a0bb5f032de40c841376712d0d697",
+  "7cc459191b51e6d8a7e1c9fc01c89a270b286c8001f97f70872c690494e7cff8",
+  "09391dc76137fa190dd323e3af100f532c6220bf92dda86c02970f1201bfbc1f",
+  "bb4f01656baf63e6bf8f55e5c8417d12fd27792b9b14dc62f894a6a15d8cfe2b",
+  "85d3a7db67628ff0d273711d8238c2790999435614670a901eebcfa61a819ded",
+  "b8200c6208887589c5073bed91cf6bbcd23406dd184fe220c1dff0e02437195b",
+  "567d154fa9d06bc0855e7e3fafa8be9b3fc72aec5a58fed14e27a2e083e1c6da",
+  "a100fb6c227d9d188d13796581119cadf494bd2a8879becc8e35cdcdc8ecf029",
+  "63f27ff30380568d769e5668e103e839d18ba35ddbe83f85801ae66bf4d44abc",
+  "c7d00447e090d28c1ddd55654ff715bdc35f8a289d4b114eaa2c00418fe291b7",
+  "2a222909fea7f249d12de8219b7e1c8c9dcacb15d40d6a5578337ad9784e13ae",
+  "8cb48ea76a5a5dfc50aeae833d70a90046df5c1497a58d4038771a063da96037",
+  "b0b8936a78b351c541b502f10bfd3c821d13dd66ccbd77b2cb676e38a5a31943",
+  "579165744c725de9d905041bc6e0317af4852b3f2754cd59952aa2874b61ab56",
+  "239040ff05ceaab83ce38d9486523c95dd4b4e319bcf4dda6b66d0100ffc352a",
+  "bd11176c05fd5d638124e8b15ea07a072f396ea1c0cf57fe01be42f3980c2434",
+  "7fe8ec198a365240ad85eca2eba321fc283081012f258e4f0848fc03d1605540",
+  "b4e47f349595c729c8034be95fba36177b837f98a8578521ef847133ceb43efd",
+  "e29a35f545a2717768851483f7e03fce3b5ef3cec5a94982e222555ed389b5d0",
+  "b9bff1a957ac066fe65ab72248a4fc89b2dd93d2c83d98fef22d76af7b6fca7f",
+  "2898e6fca419b695d5d4c00475c7f069469e0e0ef295f81f89fe1ad7f1306f17",
+  "f66d2c8fb39f019d83b780657f666e8b135a17d1f0ea8c0a7befdbcace405905",
+  "1656420c4b2aecadbad8e762f66f996416db14ed49ee052e77c63a6e120342b7",
+  "48d9a9eff1ead272a38ffa2a8ea2ce07076b5bfa55d9fecabfb16f3de82c96e1",
+  "554ebce6a1333da7efc321a57af89d9f67818b0da25cd2fd9d06f8429c35eb4d",
+  "002e6d4bbda9305d3d359f57d2f91fdf4c7713fd10d72be39bba54ca3c04a7fe",
+  "999fc6ebf10c78a96441478243d41253bb8a7c6891235b7605824b3e39f7d56a",
+  "04312a2abd654502e1a6d4431a2c32851fc45220bc357bdd6190d42b398f0598",
+  "d4919fe32397e415b6e3c1390fa2398710862c9bacea42d985b2585dbc960c0f",
+  "768a3726bea03b01141248e6f2ba19e594ced93624d808c47a1b16faf7ecf79b",
+  "0a31bd7e84bf7c2d8aa5274ce20c2b6eb5cb1ffa45d6240c9984d1c1c7d5ed94",
+  "f2752f3d798b0fe948153e45caa97137007bf622504ca078ae4d645cd6deea6a",
+  "40c22979685f953a7f8e4b081e94f933c1b50603a20eca9bb968e4e194a582c8",
+  "de40fd64f8e3c52af58c566e9c329cce15c7afdfe369a0ef26810708c6c03654",
+  "c375425e020962c4902c8e9e4c4f7452b1b3e23ee0b4ad192b89817bf768f61c",
+  "e0362aa5b25bafc0037e18ce05ee5c7f55053278aa0cf8131f6bf88d650d4c99",
+  "22d46e696176219bb08bbfd2cb156013a1efd9070b2bb9fdd7dc31ecee8bbec0",
+  "65490a5b4db070842c0b796038e05b077aec42f70f30ea5c855b95a970823218",
+  "f5b482871cc5bdd923c85b54ca649e0abc65ec02613de6425daa6cac1978ea19",
+  "8b99d059c46d1fa9fc121bcc67f2b3bb767e53d32921c37bfc91edcfe025a2b7",
+  "b483fa65a8a1393deec54f45655d0d9a7ab9ee6e677d5695620cd40567e80849",
+  "ea078dc01bb59435e51c43427634e3032a773209d76bb23ce7dd0cea98a44363",
+  "7344238930e94a5701f759e4435452899d4cc90494644033b33be4930ee05ac0",
+  "0efc2a6675b3216faf8a16eceda8a2f26f259207854dc6a1fd1cf01bd2977c0c",
+  "b08b582102d4a68b96faf8d2b68544bdcb6722dd7a99799d1450bc0209b2bbf5",
+  "e78587e257f505948bde53d3e3e132f6e7556a84d313ea57c35994a18fe82b59",
+  "1553d53ea63876779123c93b6a94278b88bba1e0708ddc3b4f12a2a9e2579aab",
+  "51525df1a5237f4c361d58080c04329a7ec5d2b484f016006319b386081847f4",
+  "f7bf9a2f9f8903fb85ff2e6829eec0506d23a694a6ec868be757addb5e4f42ef",
+  "5bba81b27b8db03bf9e5f2196a8f86a7dd81d39643481d9b16c1a269b9bc97b9",
+  "92af5ff499dddc5844fce7ab3e9dfea50aca72f8d78f7a3375956f5323143329",
+  "df3479c21eb2ae83432ffa6c15df43d59446830f36b8cdd3483e206046208fb1",
+  "1da17b885fb3cccab3321d4ef486daa8f55e1f04b582ec6cefaa86aece65fd4c",
+  "3a678822f4566d18c03670e654f2aa04da2a669d6e48e8dddda79002468121f1",
+  "e885e0381ed2e264e41c2ec6910847e7e5051e7b881de9e910127c0542ed118d",
+  "d8ec809429301c08a9ae66d27c1d78908c06207f2ab15849ac655f1f3926f216",
+  "ed81cdd296b0c161ef24aa7b3009f75c701b59fa5531ca64cf4a547a1f71ac7f",
+  "860713fe21f5a675b6fdad99be24c710ad6a988af88188ad04e0981e085c3f20",
+  "2f60af5dad3aa2f723ecde712a300fd802a83f968d931241060a872c98ac0aa1",
+  "6d57d0f0ae15831f3bfabe0f60f471a9f664543673d8479dae8ca25f2a92ea8a",
+  "b6f53eb00b761ec19b5620b7b1f2c46583d9b608a571606c543d3ea8872e3532",
+  "746d33631a1c64222f70ea00fd9761b3bdd38cb7c6420baceb6a2778ed1c36b1",
+  "d52d00f519417c2f39fee7a82fc74fcffe8daffc7cac646e5906f2ed4dca466f",
+  "2a84e97cb4b6f1d7d08fa506ef101a0a46b99377a4f6a5764a641594c471b84d",
+  "d6e57857503544bfd97ddb7560b8caf839c2b4b531043db760b49ee18c9f1b89",
+  "300242c0b037f1e7cc15f7a9b2afe4d53ca0ef29d8c6e6aa637514b2c911c738",
+  "e81f42b379f174fb826672aaf1bd5cea8fae37757b14a45af3ac44e56473d1e4",
+  "893030f09645ad2ab74b64bd8e13f69ab8bcedca14218e894f10eef90f77ecfe",
+  "0ffc01b991ff5222383805af88ab3b983b8ec5cadfda5452bade58b0d199911b",
+  "07f2a40de5479f92d918afaa02ec431d1384c629cd780e850d981ba92a136efa",
+  "bc9fee3bae700581331048cbf7b962675dca53ce4342e833a1d1c6cc2de4138b",
+  "28d6f1c358b8ab135cee6078265e0ee79226525a8a51557b3eabcc8f46f2033b",
+  "c0400f670722e4b4f8b548a4775408ffe2483a59ba5e39520832a319ba3e2122",
+  "aeb32d633a72e8ca595d9b4c9636d93963b58d36a0fd457712e7087db4211a96",
+  "eb9acab1a76f4267cd9e24bb04887ea658c1f484fe23ccead6da8c77a5cf4ff9",
+  "4d65be9478341f78a054f17d10a4b70c1732647242234366a5b540e24714feac",
+  "5f27775d743f94973b30d1e40235cb85dfa055466c180e9895adfa26d398bdb8",
+  "e744ae6a990eceaa2254bec80d50cb8dde519dc2bd7031c254a4cf6cf541e002",
+  "d116912c1c606c2592ed6708f1f7ddeea2de533ce8ba856265266dd7e0e00aef",
+  "8d0aeee5b8af09702339c94eab92d761cfe6117e290a73b1acdd99540b0dda62",
+  "978e94fdcaee71921ec3a1b0f65e61e95d03b961a2e04869fefbf5d3a36df4ac",
+  "29c3e43d7d73946705c8203053b4ce6cf8a13ed9757b519beb91ba40aea9ebc1",
+  "809e15ea1cfbd09d5372f4f5a271066cfbf339ff0148f2e1d04a51bd8ef9065b",
+  "cd2f1061194027a1c437443d49c8fba2a9753c52015c518e8015e4cb77e01171",
+  "455da57725da27599d1f243eaa0317641b35de0ee4d4ebb7580350dd3f8d2480",
+  "1cee18efff36a09831b7a62d27adb4e896af0129e404001f00764b0c397272dd",
+  "5e1912dcdd80a932c94f2b2143a09906bf89d6c0daab65797be23183932026a4",
+  "35c7899fe2e137bc76f95ff6ace2f194f2102999a11236ae5c1476d5be35646b",
+  "59351822a4e58786c8c583d95628253aa0851d4dfbca37ea4b0a91fe3f98acdd",
+  "2391fd9d31b632e79818242a043b722914d70638fd985b9e11de765d9d288a99",
+  "f6133522b16a4c025ed28c440414346ce7815dd9bb968c2cbef1195f9dacaf0e",
+  "33a2ecdaa2a272fe5325b021dcf2c7b2555e9ec9a59c032d25cd06d39999857d",
+  "a3c267213e079774471f3107185a8ba774c08f32dbeef68bd1e7d9703f4c248b",
+  "3b58585e13b3289b2ede3af0fc724c0ed95625ae6269358cb811afc7feaf5b1a",
+  "33115009a415b93538ca79d44792cfe49d0529e677d904e019e7ea6cf54b3404",
+  "e3a6ed93bdb9a79ddbf342184c5699f74419c2a0e4d81b814a1c6b660ede7f9e",
+  "273cd0ddb362028ab036031fea7ae29bdaaa660fe3023760595f742855110826",
+  "aa406de1875b22ab994a40c42d50bfb52d889f201e99803b4631af1c9062d6df",
+  "0356acd00556d6eacd5296534e69cd2c571c766e0a20df8950eec9af116cf135",
+  "316beb99e2160919eb752f69495eb6ddccd284087dddd5e5003b0117fadfeea9",
+  "df1faa69c8f4d3bb7ea1fd66cb635ea07996c844f89445a7e1445a49efa8df29",
+  "5951f425ecfb35b3d64200c51ce8d23a290c154dd62f062a797e2562802cd05e",
+  "6e0db40ab3edf3f6605574bfdfea41c4734c9d0110de0c3d0a5b284270d35db6",
+  "2a62d1806d474a2f3cc8bbb5d01d4183a1fe7c6bf39736e887775337f74d3fd0",
+  "216f0a1e2014ec490408731fdb1e4f2815e24123f293801d8b183d3becbb8be4",
+  "361c745461eca49a270af210f4a7b0bd63990949012ad7034943bec1c88d7b82",
+  "2df158e17e5e762352bb3848d4b8dd02dfb020dfc8e691eea3847bc8bcb938df",
+  "65e0ecacea2087aa0978ea1fcc87e7d29b7c43b03eef007527fe538d88a11b4a",
+  "9517c4b001e3d555f8d6416ec11a9bc543445d0a9fb8d81eb32a46ab1b4287fd",
+  "306d39e0ccb233c744c4a13002ffdcf20775494686bd16b627573401c5474ab8",
+  "10cf00c0fd7f6da2a7d51ca972b24420399f0da9b5fcb8cddc24ea90d8923512",
+  "5335a08f6027510eabe949637f9c6de0c18d3ebe101839788d3cb76a0ef0b75d",
+  "8c42694cf15f56160ae71ce35ec36eafe585e5cf95d087a9edae868c4243792e",
+  "89959956b97b2a74771e0710c6f1ccc2f1d37d9dd1cc8c31dbdc980e7cd6a7c4",
+  "5ba62ef883d84c3bf45c719d4ce5e8d0cdbfe07193b3fe28f27967e7fd1fbce3",
+  "1a8904b65e88d6e17b86e297084b0aa318470debc16c16c965fd055d9fe35168",
+  "b8c53241e374875936666cfaba4fa0b60c4d32da3bdbc3928602ad96fd404c30",
+  "dc5926495134ef74c14dd48aa134377b86d671734c4080aaee44851b11b7e369",
+  "84da50265e64a4e1e6b2367143c461d821b843844b7003a1da77a78d95c6704c",
+  "05837d445835ce19f0534b0fda1b55c6a83aa1f2d9f58e8a8a38032c3faa066b",
+  "af77e7f3549fdab185bbb24212d717b4ef710dd3822911b92f19bf21dd3d418d",
+  "260c659f9cc8d74be3cd812f09dee06b9164d0b9ea8f72983b10803a862b00f7",
+  "f458473c4ffac787537877356773a506c23918036397793c88fc445421042efe",
+  "bc1b6074d5a16e2181e4dc0a9d283d32b1b18ecd9a1334408fb100734668c3f4",
+  "f62007130865bc4b0d900e19ac9e6c15a8f61d256a5024ba202d7bfce28e6530",
+  "0124496ed3c62388a31acb5465c1d6ce5002428adbf40878c48bac199c05bbce",
+  "293b0e241ee46e6a9678c373fb199c6a0fdd70c4ea181aad40ae068008c01256",
+  "813c1929776db09743c3bbb99b901333ed419752a14ff69cf94f440bbf0526dc",
+  "bbbae754a1c59f410ac57f9f8edf6705d562955b8b7a8532e581ff0f0c62387f",
+  "c410a7836fd3e5a5b5fb9798e215087867bc127d53d53069213aff8c4852ca12",
+  "b6792cc7aa14c09953d847f9622316abf98d9e574617994ab1c54a7c99264741",
+  "f9214b1fd179f9364e89587e0148cdbf811ddaf5beec504e01629155d4669367",
+  "6c3f807bf44dd9e7e3e31998d1e54f2c4e8c69299ef12f43257f4a650384e863",
+  "0f81f9d3fd3004f027c70ad3315acdf371a357bc8f5636e22cba9a8b88042d01",
+  "44ad76cabfc3601b7378bae7c5f40bf123317b1e53b74ce236a813f7a00952f3",
+  "2ef589cf0c0fb9c5cfc0478d6f2bdce202fb5887cb0dfcc973959a71c7c9467c",
+  "8eda9ee47be6b243558b6eee988ed9147dbe5fdc5abc78e667fad7b42233c366",
+  "74aa52054c7e868d665dcdcc6b379a35262a72a348483788ff996314dfceba82",
+  "5443fcb9f0f52c50fc498521f32f00a9750f496c4865c406c004a00c8e985d59",
+  "f165bb262ba39b93e0842ece22ce2e8598e6ad007f00bb55b2b5516a17527cb7",
+  "f9758331be5607066de041ea89010bcd935d60c128a0c11a0f0dedaeab4995a7",
+  "863687bde400126c7d1c88ae3c12c46781fb784b346e47e148e7a9d4479737bc",
+  "f72f881edc207df7e7e25fcd368498bf7cb3f440ac59327b0ff4155ddb908f08",
+  "44530f10eb91b9229ad094b445c25a224c5ca950457bb0356cac481322498724",
+  "6f7329d44dfdb027fcf862548cac476a8fa887b4e394cda8eff1a0fd9cc2e70f",
+  "c7b388bff5a51698106da28be61dbb431d7ca985a977ba5c5a01866d330af02b",
+  "11d4d9b32c7e56f92ddd78d41cc26480789bd3b91cc9f42c96793fd2748d34f3",
+  "3e0761e1c5ab02f27774ab1fdb1a59884e4163a85f947dc4312b160b7405fc83",
+  "ade58d88d1dbbed7a381feb43a814615e696578796905db3a8f8ad31fab1535b",
+  "dc9145b4aff8a49da6c823813223916650ed2da3582a184d9b928cefc9d2149d",
+  "176d5f41ec40c4e81cc8a6e2370e52db3520bdfd3806afc621fcf5aa30c47238",
+  "69902f7a17fc228d65ecbed3cd07562734da5c0fd18600e7aa067039330a46a1",
+  "0582d6e3740c1163bd864ca2ca6e3ff106d2e43063a4951ed1fa606664cd36c5",
+  "33950cb62711942daa0dc1e6f851f45f426c09f3847a5bb2cf71d90b1f3b9e7b",
+  "987de522ab1425011abe927f1d76a3d0a0fad1dca735b498a09ccf547089e6d1",
+  "820391485976fdcc4a314e3458561a374859547d766dec9e754624baa883192c",
+  "6408103768739711ff3b05d9533f98e3ae92159d19dfcaa768b0afdc75421309",
+  "cd5cec4151657e517807f76a7bb1bb94128ba20ad6c954a09c23861abad12f9c",
+  "6dae7753ffa2e03d01bc904c70d17a1915a234f860ea99c9127a2d03083863ea",
+  "a9fad214a32e4b6a066a64242e655fd0553a5a869590ba84ec1f82dfc1e39423",
+  "640cf48a42c6201cfe15e89c94f6e45c88dea192dabdbc61c820f2fdec8ee402",
+  "7b2c5dcf5a2980d14bcd61420e099627667bb663e8e7e76d051568e0316eebb3",
+  "f275fc3e3e4eb8f7ea56a70fe5211bf724ef7260b11b0a4fc6564eb8d726e72b",
+  "727484724d354f163ee8f52c7f6f4c3789d4e4a3263fc8bcea132c3f59777b18",
+  "0c15d342497416c9c50a976a90bb8a76090550ca902a7705b3a5d8396c35f8fc",
+  "dfa8bf1978c49787d6afd1e8ae011dd9c5e2f0d535b375ef32bc98826561c70a",
+  "edc6caf15c7f1ad1b489c88c1557e55f8fb11f09b8a4e24c3ff92627a36f1006",
+  "8fd68172a0aa0206220c81ab7e106604f1b0182e298615a31bd7eb0af300fe6d",
+  "a3741605fbe014a627746455566c510b0958acc687e5aabdbf5f1ba794724f20",
+  "9e0129142f8bf483a4f7565de31226d043b994689b715d20a8982e2eea64ae73",
+  "639b24228f0b2414db3ce4883ac990fef6e48dc4a7bd3688914f347a0f058295",
+  "2dee9bfcc22fc7ae0cb357e10defd233f25d30b3ee1deea02196097d51cfdf08",
+  "f08e6bdae70b32d021bb0825dc63fe815dac2e875d36babeef452fba83479b4e",
+  "154e2e1da205e7dc59136de9695c6ba783206f43ee153e744ce12255521a5286",
+  "57be3a2fe175432e1ebde7531f03e44aff0d3238d4a7bcf69379440d456c0e77",
+  "3bb902c4c12c99144cd5961410b10e4fb06dbac19a240c160a50b7936d164c6d",
+  "b6613ecfd9828429d8b76b408ce9ff9c541e35ab17223102e199f45d824ec0e3",
+  "ad99741ab450204b9cd91cf78e2d33e273c14e90f82cd785199340073d2eebbe",
+  "a89269e054963bd49d75aa447fb582922350d81e5672dc66616bb720a0ef578a",
+  "8feedbeb3189df3321389cd84437b8177dc2e6805b66dc5348599323f770bd7e",
+  "aa78cbfda7e23818911661e6c164c8ce088de3946d4eb8ae125040e00dcd8bcf",
+  "adaa9966c2423d78f9956415765c26b875d602100d4bfd510891f6d55524724f",
+  "b78bad6c291518aee8f1d154896b6c3fa2c527b3fce49939489d5931a22f73bd",
+  "1cfb1810144a308d280048e785fada2beb33e4fbd8bfa5cffc7beca582e53d95",
+  "a57bba1f5135538ac7080c84fc272530e460d950b0057332f4b1e549769d8e9b",
+  "e22d30f5b45dec793c709393bfd15cafc5f8d2f441e8e49af7594f26a804a591",
+  "182820ea4c16ce1daa04d34a878799cb93a00cff98a3bbe2e122b8f7a5c6fb2a",
+  "b04d01e4cab831f29a1c4cad399bc0f3e4ba8c4e515b0fc2264d1d2e3a91ca5f",
+  "8f818e58507ca098733f5e524c87e565f59692f11603377ca2d8c1e8f25634e1",
+  "e368cb94944a8d36198e2b4fb980e907e7cba3d1b0ea59ade9eeec012d0b7030",
+  "9cc0b22750414a222d75480049b5a8ab82f0006746df0d79d6dac2fc5752eaf8",
+  "d664cf28e4a2b08d4fef3df712c74c09401433f166882ac0235ff5ea717b3c6b",
+  "7e1fb8fd7d3bb56ef8bb208a2388731b83f10884a08151ddf5ca03764b86ba83",
+  "cb12c1c9b88cca57398598d2529cfbe3cab6214ab46f3b8201b3006e5c48f84c",
+  "e3a17d8dd790ffc33844df549d2796aed4d6e2d954382142c5993d879fdfbc41",
+  "eb82e5921cb1a38e05e16c7053222b0aa18d363e0d55d96c3de37e7013a07787",
+  "9737e81d2dc679ae2bdcd9e66df5a8b419c713e2264b61c571cacf309f4bf017",
+  "eb8ddcfa49f8a3d77e9eecb73e3e57f470f5d5e1e5b890b62f74393b3ccb1db6",
+  "a960245ea0fe916d6c8602b70e8a5f6e86841e214336276a23f38edfd4c3ba83",
+  "f1618713bb8c1ed4ed8d629f2218f481a852fba58f5f5785624751d20f49099f",
+  "a92cde0341998de4f071c5e8c15b18b3923380d9e0deb1db8b01f1998d785b4f",
+  "4fec36d1ad41430d6cd1d8345646f4ec9d5c11e819115d9f792c22ef4ccd6e7a",
+  "f876dece4ff2f8c69b46fd1abb93fedddfa28f729ef406ba86b4948487e38190",
+  "672c300a8924ab01628d7912854d61d9582b2eb42897cb9dde10da371b4ae299",
+  "a4e6adcbc146db9f7ed38c1565c01e7069eb6cdca236a990e691bde29102b255",
+  "5d41ecfb848982425cf9d75bae6066682192f5dfb7d91c511ba3738c27d8648f",
+  "69f3ab96ac864e4091f2153681cb30d74e638347e734f934fdcea8dc891cfc78",
+  "af78218ee48c5751ff9d85dd1bc1dfdff0f927f60b4032c9b6952c47f662e65c",
+  "e315e94e10da30a335b0a3ea3bbc756272158204b9384f927c74b7b06025b81d",
+  "abb4a84b5376614999468eda238be44dfa9260805758f941d0508ff82aa69ac0",
+  "bb0f3df262c27d13f5e084e6b1e056d26b9e98513310c892f919084538ca3dc2",
+  "143643dcac667883e04dcc96ad85f7a7726a6be5157ac91b445d125526190c35",
+  "ef1b1fd397ffa8a8cf87ffcddc384b95d69dd95e100c49728ee7bf2b389a38cd",
+  "1025bb6428ae86450113d5e05bb5b0858f6d04081605d12116dfd48ecbe250fc",
+  "65634d9f015a7c02c1d211450be5ac660ee2d4c11838dd067340fef61493cb81",
+  "a5e364fa3fff46f9a9654192d48cbbc14f549637d2137ab613316159f2f48aa0",
+  "6f34cdb4be94126dfcf8a9af11dd782f49b37198a4765860ddcb6133431206fc",
+  "048831570c2f253f143e0183959af13cbe2957042e9d909b9935efd7e1461d6b",
+  "2b4c50028eb9ce7560d456f830cf892beee1ca605d73dffcbd9771d5916b183d",
+  "6a3857d7286c3feeb615711388c8ff44019b7c3a1580babfcd2c0903f500bc34",
+  "52b67ccb12bfb77d22aee412821f81f4f505544395f177f4be14da42fa30cabe",
+  "b70d61ee76a56cf44d3a79a4091bc1f95af3e3c80fa5cd222b346abd534c674d",
+  "76384df7d1e0e7d4732bbaa37ccbafa7819c181d79983e03222d8f78d9de15a7",
+  "f87f82e658d2f6fc6f9c873a539c9024f71d9e3d27036d191d2fbdd3e11c1123",
+  "1fb86b9a338db5c8b22d4661f58c0891abf28b55e121d6839c4113ae2116b1dd",
+  "01ce5beb94d47ff199277cf597940fb9b2146df1f7765f3c501bd20a2c6b4528",
+  "850bd585584532993dd447ff093578cb0684dda340f74e6856060158d486972d",
+  "274f13955d46b99b4a30cfacaabf85312bc562297129a6f4d010012768872b72",
+  "72095f2c5470ddaeda2e903aab288459efb010b2b20aa67fa8a5abac4b95d0f1",
+  "e9e183fdbfc3e9343aa95b238fed82832d04f20068085197f0375536da330243",
+  "6a4d7627330eec24e300d5b7d3db0c2b54409a44cb20c3a724042628c9991b92",
+  "2ee6a57b5a7e8675b8b5c7da85e628e81538bf72b78d81c3e16fe48d9e66eee9",
+  "dcc24eaacb4de83c4bd36e1142bc6b165670b01444be390431415bf696dcb47b",
+  "2607728b05b0632d9bd0bdc218c35715d5894c82cabf07056965c34e92946a33",
+  "0833a8aaec755784e35b6c9899ce53fbfb841439d7ea759de37b0b2ada083571",
+  "13e967004958cc8b1b5961613b38bc2bce3f7e21b9d76d5885c891a985312784",
+  "33d7724713d9280db0d2d9c0e434ef31ae68e625532592434d5eff4fc3af4049",
+  "11e6c3c01a1132a89c3c573116bf2299005af1f89a9d7e3fe052e7430f73f899",
+  "82d9df6cbec30537f7a412f8b5851ce21f5f31ce15875faa4f4a1f607fd9d5ad",
+  "09e7bb1f0b00ec7d9631e68435ab5828224287be927cba571eecdcd17b13443e",
+  "253a285c603c75abaa84130f03ca33f532b5f8c096afcd76a7623b57099aba55",
+  "fc88c0bafaf058c2e6b9543b1e5e73a9482acfd4fc71889c1a0084b0763a1346",
+  "814fb597ef6d4a656703dd8ec125389177846d3d61a9b961688558c914d91de6",
+  "7d39611b6c3f4968483193ffca30428e1b826228d502e8b54b0ea6abde74ff0a",
+  "47ca962bf7d1d403690d551ee984929b9c74ae26a539f1de5d98728c92174080",
+  "7cfebbc49763066598a8b0c6a43fe91de163bec91df9945bedde311cf9a9a03f",
+  "ed839cc2e4336dde5d0440acd9b37515c0b3646f13024ddd081656d98c5dd638",
+  "1f886b9699e897165fb2f99141a45073ebcd39167ee84dc54e6a325094f4525f",
+  "eb6a1403eec90819555ee7ef2835c7fbc913fae1de0d63dd896e9288c6fd37de",
+  "d12c6cd68ec8fb96d6beabd24a42482628278c48f908c4277aafccbb82e4c588",
+  "37c87ddf53fd87754a4569a6bf00b9211b9019ffbf873b61b308c3a490b8aaac",
+  "21e4bc1a108c06cd69fdcfe6d5f0c25a14c6e98e6c80068236b291bdb2a3bea4",
+  "6af00b0686e80536bba0c5d278253404e6d97c90cf1f5fa2ebe6d39455dfb18d",
+  "a7eb78cb2b57c62c73ef4ca03dbec40f95368a36b4b32413609f5f30d4407946",
+  "f49b8f410b426daa31ba34a871d2c0bbb75298a80067b211db7d599fc2b488a6",
+  "f10a25828bdd25a6954452410bbfd462992900c266cff72fa56615ea23583f8a",
+  "e44fff30866a98a88df8fc1f4d565d2d93608ee042c077d8de5ee9dde203874b",
+  "a9cfa3a12c39ae676a6a8c3a310eda833542ce1c9b16ac8f01f46bac1a51db7b",
+  "4b8b2f500211ad2744114e7e4002c6805f982c5a8d9930204da476a5c3e7c73d",
+  "14b8907fd0799113815fed904c651ee2ecf394b935b18c5763273705a4f687d0",
+  "c25fa178056a1752057d2d9f9f7e48a0a616e1e05cedb5a4d86d0fb6103116bc",
+  "20e494384da66f60dd718833e608048254012985f54d325af0c6539a8d591f38",
+  "665f53a821d5bf3fbf4f196754fbe2bb9cbe691174d793df167044ec8d5682c2",
+  "007c169ba3d8711ed1a75f83b7534ddfe9df2690319b84d32da29f62e61e8aa3",
+  "82e40af7d1fe80038d94baa34bccd6b9b4c9a36e07ada3dcd23b4e451b606c1d",
+  "a66dc7dd9351db143a5c5f7de590b32ace2cda09276df2d5add446768a215280",
+  "07add6afbbb6d5ad18cea505f3d2c3ce60eae7185f5190195f898f6bac94b0b2",
+  "7667fd57719ba0b14f56dd3e654a71feb55ff1378bf063832c06f348cf962e67",
+  "8f573967cfe6e144fe50b85f0711d2dcb872bf2f0632d63b71b772cf51c966d7",
+  "2298634cca9e27d81be06d8a79fdd9483b3e53b13c3135e7f38979d11040495d",
+  "7a929b61066b52a4611fb9f2eb002a42cbe4c08d610fbf0cea51ec72407e7866",
+  "9fc985c83cecf54219812c76bb22e541a449dac3517b36221da7a5728eb7d1bc",
+  "00c9df736fd74d0ea79561135a1a69087f55c7a7816784b97d842af3ef392bbf",
+  "b0486267a438793265cc6387e32ba535045f55c42861cf58facffcc2a4a011d6",
+  "93701b6f7256a1bdb7f8448267fcc2d72368a5eeba6f849c52edc69ce09595b2",
+  "78a18c9bbb51d8ff2dbd6695a3a34f619ed28315593fddaea99882874a582808",
+  "4c7581d6c4f65c7b973e925f1524f1d465d60921006e5d21804c3e69495ffadb",
+  "11553a314b7a898cf9f233be0463ab0d11e889b3536aab1e41c0acf4366cca52",
+  "4e7d39c66bbae048ca964b81d3bede8c20128b6d72edc19e4f35c9d3410c8f71",
+  "4392d9078ef4a57567fdb6b0dc32363f0567723258cd0fbdcae85692b23c7a5c",
+  "bdc3961a579182e3921a03bd7382d7f863d2435c776f7f303888c7a7631cf14c",
+  "97aa2bf522ffe92970b93acffe0d7c0d5a4c5faba0b088aa40845cfa00b4b895",
+  "c1094dc9e6bbf66e70d838befd682bb416443a2cfc51a575bf4d8c7faef2094d",
+  "9db5637764ceeef51218cc12c1012941b554a1f549c2e038020378cb900d20dc",
+  "21329202e90b90e3b50e44c41516ccdb21f7852d091008a167fd897a00297fbc",
+  "e3da0642bb27bfb353be2f6fb690e2aa173f20ea8337cf8e68c9a941c4ac8619",
+  "e953036c82b245cc69e4968885b5e08f2d71301dcec54d9faf2f9a8317a3cbaf",
+  "2ef0cc05aa60becfc859ece22d797a8afd121844d8ec5102399fbdb065e1212f",
 ];
+
+// 인증 유지 시간 (10분)
+const SESSION_TTL_MS = 10 * 60 * 1000;
+const SESSION_KEY = 'hlch_auth_session';
 
 async function sha256Hex(text) {
   const enc = new TextEncoder().encode(text);
@@ -438,34 +827,84 @@ async function sha256Hex(text) {
 }
 
 const gateForm = document.getElementById('gate-form');
+const gateNameInput = document.getElementById('gate-name');
 const gateInput = document.getElementById('gate-input');
 const gateError = document.getElementById('gate-error');
 const gateScreen = document.getElementById('gate-screen');
 const contentScreen = document.getElementById('content-screen');
+// 이름/번호 입력칸은 입력 단계에서 막지 않고, '확인' 클릭 시에만 검증합니다.
+// (실시간으로 글자를 지우면 사용자가 입력이 안 되는 것으로 오해할 수 있기 때문)
 
-// 숫자만 입력되도록 보정
-gateInput.addEventListener('input', () => {
-  gateInput.value = gateInput.value.replace(/[^0-9]/g, '').slice(0, 4);
-});
+function showContent() {
+  gateScreen.style.display = 'none';
+  contentScreen.style.display = 'block';
+}
+
+function showGate() {
+  gateScreen.style.display = 'flex';
+  contentScreen.style.display = 'none';
+  gateNameInput.focus();
+}
+
+// ===== 페이지 로드 시: 세션 확인 (새로고침 시 인증 유지, 10분 경과 시 만료) =====
+(function checkSession() {
+  try {
+    const raw = sessionStorage.getItem(SESSION_KEY);
+    if (!raw) {
+      gateNameInput.focus();
+      return;
+    }
+    const session = JSON.parse(raw);
+    const now = Date.now();
+    if (session.expiresAt && now < session.expiresAt) {
+      showContent();
+    } else {
+      sessionStorage.removeItem(SESSION_KEY);
+      gateNameInput.focus();
+    }
+  } catch (e) {
+    sessionStorage.removeItem(SESSION_KEY);
+    gateNameInput.focus();
+  }
+})();
 
 gateForm.addEventListener('submit', async (e) => {
   e.preventDefault();
-  const value = gateInput.value.trim();
+  const name = gateNameInput.value.trim();
+  const number = gateInput.value.trim();
 
-  if (value.length !== 4) {
-    gateError.textContent = '4자리 숫자를 입력해주세요.';
+  // 이름 검증: 한글만, 1~4자
+  const isKoreanOnly = /^[가-힣]+$/.test(name);
+  if (!isKoreanOnly || name.length < 1 || name.length > 7) {
+    alert('이름을 다시 입력해주세요. (한글 7자 이내)');
+    gateNameInput.value = '';
+    gateInput.value = '';
+    gateNameInput.focus();
     return;
   }
 
-  const hash = await sha256Hex(value);
+  // 번호 검증: 숫자만, 4자리
+  const isNumberOnly = /^[0-9]+$/.test(number);
+  if (!isNumberOnly || number.length !== 4) {
+    alert('전화번호 뒷자리를 다시 입력해주세요. (숫자 4자리)');
+    gateNameInput.value = '';
+    gateInput.value = '';
+    gateNameInput.focus();
+    return;
+  }
+
+  const combo = `${name}|${number}`;
+  const hash = await sha256Hex(combo);
 
   if (ALLOWED_HASHES.includes(hash)) {
-    gateScreen.style.display = 'none';
-    contentScreen.style.display = 'block';
+    const session = { expiresAt: Date.now() + SESSION_TTL_MS };
+    sessionStorage.setItem(SESSION_KEY, JSON.stringify(session));
+    showContent();
   } else {
-    gateError.textContent = '일치하는 번호가 없습니다. 다시 확인해주세요.';
+    gateError.textContent = '이름 또는 번호가 일치하지 않습니다. 다시 확인해주세요.';
+    gateNameInput.value = '';
     gateInput.value = '';
-    gateInput.focus();
+    gateNameInput.focus();
   }
 });
 </script>
